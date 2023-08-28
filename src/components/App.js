@@ -24,8 +24,7 @@ const App = () => {
         </form>
         <ul>
         {taskArr.length> 0 && taskArr.map((item,idx) => {
-         return ( <li>
-           <span>{item}</span>
+         return ( <li>{item}
             <button onClick={() => deleteTask(idx)}>Delete</button>
          </li>
           
