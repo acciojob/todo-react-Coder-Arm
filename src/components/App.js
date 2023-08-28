@@ -22,14 +22,16 @@ const App = () => {
           <input type="text" value = {task} onChange={(e) => setTask(e.target.value)}/>
           <button onClick={addTask}>Add Todo</button>
         </form>
+        <ul>
         {taskArr.length> 0 && taskArr.map((item,idx) => {
-         return ( <div>
+         return ( <li>
            <span>{item}</span>
             <button onClick={() => deleteTask(idx)}>Delete</button>
-         </div>
+         </li>
           
           )
         })}
+        </ul>
     </div>
   )
 }
